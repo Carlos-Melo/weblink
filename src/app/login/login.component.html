@@ -1,15 +1,17 @@
 <div class="container my-5">
     <div class="row justify-content-center">
-        <div class="col-12 col-md-4 px-0 px-md-5">
+        <form [formGroup]="formulario" (submit)="validarFormulario()" class="col-12 col-md-4 px-0 px-md-5">
             <h4 class="text-center mt-5">Login</h4>
             <div>
                 <div class="mb-3 mt-5">
                     <label for="cpf" class="form-label">CPF/CNPJ</label>
-                    <input type="text" class="form-control shadow-none" id="cpf">
+                    <input formControlName="cpfCnpj" [ngClass]="aplicaCssErro('cpfCnpj')" type="text" mask="000.000.000-00||00.000.000/0000-00" class="form-control shadow-none" id="cpf">
+                    <span class="invalid-feedback" style="font-size: 12px;">Campo obrigatório</span>
                 </div>
                 <div class="mb-3">
                     <label for="senha" class="form-label">Senha</label>
-                    <input type="password" class="form-control shadow-none" id="senha">
+                    <input formControlName="senha" [ngClass]="aplicaCssErro('senha')" type="password" class="form-control shadow-none" id="senha">
+                    <span class="invalid-feedback" style="font-size: 12px;">Campo obrigatório</span>
                 </div>
                 <div class="mt-5 text-center">
                     <button type="submit" class="btn text-white mb-3 w-100 shadow-none">Entrar</button>
@@ -19,6 +21,6 @@
                 <p class="mb-4 fs-6">Não possui conta?</p>
                 <a class="text-dark" routerLink="/cadastro">Cadastre-se</a>
             </div> 
-        </div>
+        </form>
     </div>
 </div>

@@ -7,13 +7,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav w-100 d-flex">
                 <li class="nav-item">
+                    <a class="nav-link me-sm-3" routerLink="/inicio" routerLinkActive="active">Início</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link me-sm-3" routerLink="/perfil" routerLinkActive="active">Perfil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/boletos" routerLinkActive="active">Boletos</a>
+                    <a class="nav-link" routerLink="/boletos" routerLinkActive="active">Pagamentos</a>
                 </li>
                 <li class="nav-item ms-auto">
-                    <a class="nav-link" routerLink="/">Sair</a>
+                    <a class="nav-link" routerLink="/" (click)="sair()">Sair</a>
                 </li>
             </ul>
         </div>

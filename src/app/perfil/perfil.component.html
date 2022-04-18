@@ -1,1 +1,67 @@
-<p>perfil works!</p>
+<div class="container mt-5">
+    <form [formGroup]="formulario" (submit)="validarFormulario()" class="row justify-content-between mb-5">
+        <div class="col-12 col-md-6">
+            <div class="card border-0">
+                <div class="card-body">
+                    <h5 class="card-title">Dados Pessoais</h5>
+                    <hr>
+                    <div>
+                        <div class="mb-3 mt-md-3">
+                            <label for="nome" class="form-label">Nome</label>
+                            <input type="text" formControlName="nome" class="form-control shadow-none" id="nome">
+                        </div>
+                        <div class="mb-3">
+                            <label for="cpfCnpj" class="form-label">CPF/CNPJ</label>
+                            <input type="text" formControlName="cpfCnpj" class="form-control shadow-none" mask="000.000.000-00||00.000.000/0000-00" id="cpfCnpj">
+                        </div>
+                        <div class="mb-3 mt-md-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" formControlName="email" class="form-control shadow-none" id="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="senha" class="form-label">Senha</label>
+                            <input type="password" formControlName="senha" class="form-control shadow-none" id="senha">
+                        </div>
+                        <div class="mt-4 text-center mt-5">
+                            <button type="submit" class="btn botao text-white mb-3 w-50 shadow-none">Editar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-5 mt-5 mt-md-0">
+            <div class="card border-0">
+                <div class="card-body">
+                    <h5 class="card-title">Endereço</h5>
+                    <hr>
+                    <div>
+                        <div class="mb-3">
+                            <label for="cep" class="form-label">CEP</label>
+                            <input type="text" formControlName="cep" class="form-control shadow-none" mask="00000-000" id="cep">
+                        </div>
+                        <div class="mb-3">
+                            <label for="cidade" class="form-label">Cidade</label>
+                            <input type="text" formControlName="cidade" class="form-control shadow-none" id="cidade">
+                        </div>
+                        <div class="mb-3">
+                            <label for="rua" class="form-label">Rua</label>
+                            <input type="text" formControlName="rua" class="form-control shadow-none" id="rua">
+                        </div>
+                        <div class="mb-3">
+                            <label for="estado" class="form-label">Estado</label>
+                            <input type="text" formControlName="estado" class="form-control shadow-none" id="estado">
+                        </div>
+                        <div class="mb-3">
+                            <label for="bairro" class="form-label">Bairro</label>
+                            <input type="text" formControlName="bairro" class="form-control shadow-none" id="bairro">
+                        </div>
+                        <div class="mb-3">
+                            <label for="numero" class="form-label">Número</label>
+                            <input type="text" formControlName="numero" class="form-control shadow-none" id="numero">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

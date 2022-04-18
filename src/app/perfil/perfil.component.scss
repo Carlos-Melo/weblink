@@ -1,0 +1,14 @@
+.col-12{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.botao {
+    background-color: #2E52F2;
+}
+
+input {
+    border: solid 2px #e0e0e0;
+    &:focus {
+        border: solid 2px #2E52F2;
+    }
+}

@@ -15,6 +15,7 @@ const routes: Routes = [
   { path: 'boletos', component: BoletosComponent },
   { path: 'inicio', component: InicioComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },
   //{ path: '**', component:  }
 ];
 
